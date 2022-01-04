@@ -1,0 +1,17 @@
+Klassenfahrten Buchen:
+
+[da die Namensgebung teilweise leicht missverständlich ist wird die Programmiereinheit "Klasse" im Folgenenden als class bezeichnet]
+
+Dieses Programm ist im Ramen des Informatikunterrichtes in den Weihnachtsferien 2021/2022 entstanden. 
+
+Es sollen verschiedene Aspekte einer Klassenreise (Klasse, Lehrer und Reiseziel) zu einer Klassenfahrt vereint werden. 
+
+Um sich die bereits erstellten Klassenreisen anzusehen gibt es drei Methoden:
+1. die printAllObjects Methode, hier werden alle Objekte der angefragten class (in diesem Fall Klassenfahrten) ausgegeben
+2. die printSpecificObject Methode, durch sie wird ein bestimmtes Objekt der angefragten class ausgegeben
+3. (das ist nur bei den Klassenfahrten möglich:) die checkAll bzw die checkSpecific Methode, hier werden wieder alle bzw eine Klassenfahrt ausgegeben, jedoch mit dem Vermerk, ob sie die angeforderten Kriterien zur Durchführung einer Reise erfüllt.
+
+
+Das Anspruchvollste dieser Aufgabe war die Implementierung des Datums in die Klassenreise. Es gibt in Java mehrere Biblioteken, die mit dem Datum arbeiten. Ich habe mich dazu entschieden java.text.SimpleDateFormat zu verwenden. Um damit ein Datum anzugeben muss ein String übergeben werden, der die vorher festgelegte Zahlenabfolge (in meinem Fall dd.MM.yyyy) enthaält. Da ein String auch eine andere Zeichenfolge enthalten kann, muss ausprobiert werden, ob der String die Kriterien erfüllt und wird erst dann in ein Datum übersetzt, mit dem man dann im Folgenden auch rechnen könnte. All dies spielt sich im Constructor der class Klassenfahrt ab. In der class KlassenfahrtController wird das Start- und Enddatum dann mit hilfe der Methode SimpleDateFormat.format() angegeben. In den Parametern wird dabei die gewünschte Zahlenabfolge angegeben.
+
+Dieses Programm arbeitet mit der MVC Struktur.
