@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import model.Klasse;
 
+// Controller für die Schulklassen
 public class KlasseController extends ClassController{
 
     ArrayList<Klasse> klassen;

@@ -23,6 +23,7 @@ public class KlassenfahrtController extends ClassController{
         int i =0;
         sendOutput("Alle Klassenfahrten:\n");
         for (Klassenfahrt klassenfahrt : klassenfahrten) {
+            // Ausgabe der Eigenschaften. In den letzten beiden Abfragen wird das Start- bzw Enddatum angegeben -> Erklährung siehe Notizen
             sendOutput(i+". \nReiseziel: "+klassenfahrt.getReiseziel().getName()+"\nKlasse: "+klassenfahrt.getKlasse().getName()+"\nLehrer eins: "+klassenfahrt.getLehrer_1().getName()+"\nLehrer zwei: "+klassenfahrt.getLehrer_2().getName()+"\nStart: "+klassenfahrt.getSdf().format(klassenfahrt.getStart())+ "\nEnde:  "+klassenfahrt.getSdf().format(klassenfahrt.getEnde())+"\n");
             i++;
         }
@@ -31,7 +32,7 @@ public class KlassenfahrtController extends ClassController{
 
     public void printSpecificObject(int index) {
         Klassenfahrt k = getKlassenfahrten().get(index);
-        sendOutput("Reiseziel: "+k.getReiseziel().getName()+"\nKlasse: "+k.getKlasse().getName()+"\nLehrer eins: "+k.getLehrer_1().getName()+"\nLehrer zwei: "+k.getLehrer_2().getName()+"\n");
+        sendOutput("Reiseziel: "+k.getReiseziel().getName()+"\nKlasse: "+k.getKlasse().getName()+"\nLehrer eins: "+k.getLehrer_1().getName()+"\nLehrer zwei: "+k.getLehrer_2().getName()+"\nStart: "+ k.getSdf().format(k.getStart())+"\nEnde: "+k.getSdf().format(k.getEnde()));
         
     }
 
